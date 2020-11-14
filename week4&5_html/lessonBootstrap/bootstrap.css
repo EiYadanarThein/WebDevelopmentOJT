@@ -1,0 +1,16 @@
+nav
+{
+ background-color: rgb(161, 61, 207);
+ height: 70px;
+}
+#logo
+{
+ color: white;
+ border: solid white;
+ border-radius: 2px;
+ padding: 2px;
+}
+li a
+{
+    color: white;
+}

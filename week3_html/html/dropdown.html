@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drop Down</title>
+	<style>
+		*
+		{ padding: 0;
+		margin: 0;
+		}
+		body{font-family: sans-serif;font-size: 14px;}
+		.manu-bar
+		{
+		background:pink;
+		}
+		.manu-bar ul
+		{
+		display: inline-flex;
+		list-style: none;
+		color: #fff;
+		}
+		.manu-bar ul li
+		{
+		width: 80px;
+		margin: 15px;
+		padding: 15px;
+		}
+		.manu-bar ul li a
+		{
+		text-decoration:none;
+		color: #fff;
+		}
+		.manu-bar ul li:hover
+		{
+		background: pink;
+		border-radius: 3px;
+		transition-delay: 0.1s;
+		transition-property: linear 0.1s;
+		}
+		.sub-menu-1
+		{
+		display:none;
+		}
+		.manu-bar ul li:hover .sub-menu-1
+		{
+		display: block;
+		position: absolute;
+		background:pink;
+		margin-top: 15px;
+		margin-left: -15px;
+transition-delay: 0.1s;
+		transition-property: linear 0.1s;
+		}
+		.manu-bar ul li:hover .sub-menu-1 ul
+		{
+		display: block;
+		margin: 10px;
+transition-delay: 0.1s;
+		transition-property: linear 0.1s;
+		}
+		.manu-bar ul li:hover .sub-menu-1 ul li
+		{
+		width: 150px;
+		padding: 10px;
+		border-bottom: 1px dotted #fff;
+		background: transparent;
+		border-radius: 0;
+		text-align: left;
+transition-delay: 0.1s;
+		transition-property: linear 0.1s;
+		}
+		.manu-bar ul li:hover .sub-menu-1 ul li:last-child
+		{
+		border-bottom: none;
+transition-delay: 0.1s;
+		transition-property: linear 0.1s;
+		}
+		.manu-bar ul li:hover .sub-menu-1 ul li a:hover
+		{
+		color:palevioletred;
+		}
+		.sub-menu-2
+		{
+		display: none;
+		}
+		.hover-me:hover .sub-menu-2
+		{
+		position: absolute;
+		display: block;
+		margin-top: -40px;
+		margin-left: 140px;
+		background:pink;
+		}
+
+		
+</style>
+</head>
+<body>
+	<div class="manu-bar">
+            <ul><li>HOME
+		<div class="sub-menu-1">
+		<ul>
+                	<li><a href="#">Html</a></li>
+                	<li><a href="#">Css</a></li>
+					<li><a href="#">Php</a></li>
+					<li><a href="#">Java</a></li>
+					<li><a href="#">Php</a></li>
+            	</ul>
+		</div>
+            </li>
+            	<li>TUTORIAL
+		<div class="sub-menu-1">
+            	<ul>
+                	<li class="hover-me"><a href="#">assignment1</a>
+				<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">package1</a></li>
+                				<li><a href="#">package2</a></li>
+                				<li><a href="#">package3</a></li>
+            				</ul>
+				</div>
+			</li>
+                	<li class="hover-me"><a href="#">assignment2</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">package1</a></li>
+                				<li><a href="#">package2</a></li>
+                				<li><a href="#">package3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">assignment3</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">package1</a></li>
+                				<li><a href="#">package2</a></li>
+                				<li><a href="#">package3</a></li>
+            				</ul>
+				</div>
+</li>
+            	</ul>
+		</div>
+            </li>
+                <li>ELECTRONICS
+			<div class="sub-menu-1">
+                	<ul>
+                	<li class="hover-me"><a href="#">Laptop</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">Desktop</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">D vs L</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+            	</ul>
+			</div>
+            </li>
+                <li>TECHNOLOGY
+			<div class="sub-menu-1">
+			<ul>
+                	<li class="hover-me"><a href="#">Civil</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">Electrical power</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">Neuclear</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+			</ul>
+			</div>
+            </li>
+<li>EDUCATION
+			<div class="sub-menu-1">
+			<ul>
+                	<li class="hover-me"><a href="#">Civil</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">EP</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">Neuclear</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+			</ul>
+			</div>
+            </li>
+<li>NEWS
+			<div class="sub-menu-1">
+			<ul>
+                	<li class="hover-me"><a href="#">Normal</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">strange</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">heavy</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+			</ul>
+			</div>
+            </li>
+<li>ABOUT AS
+			<div class="sub-menu-1">
+			<ul>
+                	<li class="hover-me"><a href="#">Address</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">Phone no</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">age</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+			</ul>
+			</div>
+            </li>
+<li>CONTACT
+			<div class="sub-menu-1">
+			<ul>
+                	<li class="hover-me"><a href="#">address</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">ph no</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+                	<li class="hover-me"><a href="#">end</a>
+<div class="sub-menu-2">
+					<ul>
+                				<li><a href="#">assignment1</a></li>
+                				<li><a href="#">assignment2</a></li>
+                				<li><a href="#">assignment3</a></li>
+            				</ul>
+				</div>
+</li>
+			</ul>
+			</div>
+            </li>
+
+                </div>
+                            
+
+</body>
+</html>

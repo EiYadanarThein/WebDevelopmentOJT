@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Query</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            .p1{
+                height:200px;
+                width:100%;
+                background-color: red;
+               }
+            .p2{
+                height:200px;
+                width:30%;
+                background-color: blue;
+               }
+            @media screen and (min-width: 1000px) {
+                .p1{
+                    width: 100%;
+                }
+                .p2{
+                    width: 50%;
+                }
+            }
+            @media screen and (min-width: 600px) {
+                .p1{
+                    width: 300px;
+                   }
+                .p2{
+                    width: 200px;
+                   }
+            }
+            @media print{
+                      .p1{
+                        background-color: white;
+                        }
+                     .p2{
+                        background-color: white;
+                       }
+                      }   
+                
+           
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quam debitis voluptate dignissimos quo impedit doloremque repellendus? Nihil accusamus repudiandae vitae consequatur, doloribus cumque impedit facilis amet! Sit, magni nobis!</p>
+            <p class="p2">Hello World</p>
+        </div>
+    </body>
+
+</html>

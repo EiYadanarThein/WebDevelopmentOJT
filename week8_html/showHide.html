@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Show Hide</title>
+        <!--JS code Integration Online-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!---JS code Integration Offline-->
+        <script src="js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv1">
+            div1
+        </div>
+        <div id="mydiv2">
+           div2
+        </div>
+        <div id="mydiv3">
+            div3
+        </div>
+        <button type="button" id="show">Show</button>
+        <button type="button" id="hide">Hide</button>
+        <button type="button" id="toggle">Toggle</button>
+        <script>
+            $(document).ready(function()
+            {
+                $("#mydiv1").hide();
+                $("#mydiv2").hide();
+                $("#mydiv3").hide();
+                $("#show").click(function()
+                {
+                    $("#mydiv1").show("fast");
+                    $("#mydiv2").show("normal");
+                    $("#mydiv3").show("slow");
+               
+                })
+                $("#hide").click(function()
+                {
+                    $("#mydiv1").hide("slow",showalert());
+                    $("#mydiv2").hide("slow",function()
+                    {
+                        alert("div2 is hiding slowly");
+                    });
+                    $("#mydiv3").hide();
+               
+                })
+                function showalert()
+                {
+                    alert("div1 is hiding slowly.")
+                }
+                $("#toggle").click(function()
+                {
+                    $("#mydiv1").toggle("slow",function()
+                    {
+                        alert("div1 is toggle.")
+                    });
+                   
+               
+                })
+            })
+        </script>
+    </body>
+</html>

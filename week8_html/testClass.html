@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test class</title>
+        <!--JS code Integration Online-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!---JS code Integration Offline-->
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <style>
+            .mydiv
+            {
+                border: solid red 2px;
+                width: 200px;
+                height: 200px;
+            }
+            .changebtn
+            {
+                color: orange;
+                background-color: orchid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv1">
+            Div 1
+        </div>
+        <div id="mydiv2">
+           Div 2
+        </div>
+        <div id="mydiv3">
+            Div 3
+        </div>
+       <button type="button" id="addbtn">add</button>
+       <button type="button" id="removebtn">remove</button>
+       <button type="button" id="togglebtn">toggle</button>
+       
+        <script>
+           $(document).ready(function()
+           {
+               $("#addbtn").click(function()
+               {
+                   $("#mydiv1").addClass("mydiv");
+               })
+               $("#removebtn").click(function()
+               {
+                   $("#mydiv1").removeClass("mydiv");
+               })
+               $("#togglebtn").click(function()
+               {
+                   $("#mydiv2").toggleClass("mydiv");
+               })
+               $("#togglebtn").hover(function()
+               {
+                   $("#togglebtn").toggleClass("changebtn");
+               })
+           })
+        </script>
+    </body>
+</html>

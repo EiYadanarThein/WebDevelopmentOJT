@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Jquery</title>
+        <!--JS code Integration Online-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!---JS code Integration Offline-->
+        <script src="js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv">
+            <h2 id="h2">Hello!</h2>
+            <p class="p1">This is Paragraph 1.</p>
+        </div>
+        <div class="mydiv1">
+            Hello!
+            <p>This is Paragraph 2.</p>
+        </div>
+        <div id="mydiv2">
+            Hello!
+            <p>This is Paragraph 2.</p>
+        </div>
+        <input type="button" id="mybtn" name="submit" value="submit">
+        <script>
+            //JS Code
+            /*document.addEventListener("DOMContentLoaded",function()
+            {
+                document.getElementById("mybtn").onclick=()=>
+                {
+                    document.getElementById("mydiv").style.backgroundColor="red";
+                }
+            })*/
+            //Jquery Code
+            $(document).ready(function()
+            {
+                $("#mybtn").click(function()
+                {
+                    $("#mydiv").css("background-color","green");
+                    $("div").css("color","white");
+                    $("div p").css("background-color","pink");
+                    $("div.mydiv1").css("background-color","blue");
+                    $("div").eq(2).css("background-color","red");
+                    $("div:nth-child(1)").css("background-color","yellow");
+                    $("div:first").css("color","black");
+                    $("div:last").css("color","black");
+                    $("#h2, .p1").css("background-color","purple");
+                })
+            })
+        </script>
+    </body>
+</html>

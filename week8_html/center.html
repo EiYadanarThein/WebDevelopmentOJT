@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  display: none;
+ 
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="image/mandalay-banner.jpg" alt="Snow" style="width:100%;">
+  <div class="bottom-left"></div>
+  <div class="top-left">Top Left</div>
+  <div class="top-right">Top Right</div>
+  <div class="bottom-right">Bottom Right</div>
+  <div class="centered"></div>
+</div>
+<button id="bl" >BottomLeft</button>
+<button id="center" >Centered</button>
+<script>
+    $(document).ready(function(){
+       $("#center").click(function()
+       {
+          if($(".centered").is(":hidden"))
+          {
+            $(".centered")
+            .text("This is center")
+            .css({background:"red",color:"yellow"})         
+            .slideDown()
+            $("#center")
+            .css("background","green")
+          }
+          else
+          {
+              alert("already visible");
+          }
+        })
+
+        $("#bl").click(function()
+       {
+          if($(".bottom-left").is(":hidden"))
+          {
+            $(".bottom-left")
+            .text("This is Buttom left")
+            .css({background:"green",color:"yellow"})         
+            .slideDown()
+            $("#bl")
+            .css("background","blue")
+          }
+          else
+          {
+              alert("already visible");
+          }
+        })
+       
+    })
+</script>
+</body>
+</html> 

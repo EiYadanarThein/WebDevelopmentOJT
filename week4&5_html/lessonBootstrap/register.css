@@ -1,0 +1,21 @@
+body
+{
+    background-color:rgb(177, 12, 149) !important;
+}
+
+
+.column
+{
+    border: solid gray;
+    
+    border-radius: 10px;
+    background-color: white;
+    display: block;
+    margin-top: 5%;
+    
+}
+
+.container
+{
+    width: 400%;
+}

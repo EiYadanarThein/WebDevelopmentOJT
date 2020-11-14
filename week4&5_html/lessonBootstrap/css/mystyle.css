@@ -1,0 +1,15 @@
+.container-fluid
+{
+    background-color:navy;
+}
+.col
+{
+    color:yellow;
+    border:red solid;
+}
+
+.column
+{
+    color:yellow;
+    border:black solid;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Test Regax
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h2 id="heading">Test Regax</h2>
+        
+        <script>
+
+            var pattern=/hello/i;
+            console.log(pattern.test("Hello World"));
+
+            var cpattern=/[bt]ear/;
+            console.log(cpattern.test("ear"));
+
+            var cpattern=/[^bt]ear/;
+            console.log(cpattern.test("btear"));
+            console.log(cpattern.test("fear"));
+
+            var cpattern=/[0-9][a-z]/
+            console.log(cpattern.test("2h"));
+
+            var cpattern=/[0-9]+[a-z]+/
+            console.log(cpattern.test("229"));
+            
+
+            var cpattern=/[0-9]*[a-z]*/
+            console.log(cpattern.test("229"));
+            console.log(cpattern.test("229gh"));
+            
+            //check date format DD.MM.YY DD-MM-YY DD/MM/YY
+            console.log("Date format");
+            var date=/^\d{1,2}[\.\-\/][0-9]{1,2}[\.\-\/]([0-9]{2})?$/;
+            console.log(date.test("22.4.20"));
+            console.log(date.test("22/04/20"));
+            console.log(date.test("223.4.20"));
+            console.log(date.test("22.04.20"));
+
+            //check mobile phone number 09453337663,09-453337663,09 453337663
+            console.log("phone number");
+            var phone=/^\d{2}[\s\-]?\d{9}$/;
+            console.log(phone.test("09453337663"));
+            console.log(phone.test("09 453337663"));
+            console.log(phone.test("09-453337663"));
+            console.log(phone.test("013-453337663"));
+
+            //check mobile phone no (095)-09-453337663 , (095) 09 453337663 , (095)09453337663
+            var phone=/^[(]\d{3}[)][\s\-]?\d{2}[\s\-]?\d{9}$/
+            console.log("ph"+phone.test("(095)09453337663"));
+            console.log("ph"+phone.test("(095) 09 453337663"));
+            console.log("ph"+phone.test("(095)-09-453337663"));
+            console.log("ph"+phone.test("(0954)09453337663"));
+
+            
+
+        </script>
+    </body>
+</html>
